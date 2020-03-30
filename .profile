@@ -8,7 +8,7 @@ export LARBSWM="$(cat ~/.local/share/larbs/wm 2>/dev/null)" &&
 	[ "$LARBSWM" = "dwm" ] || export LARBSWM="i3"
 
 # Default programs:
-export EDITOR="nvim"
+export EDITOR="vim"
 export TERMINAL="st"
 export BROWSER="brave"
 export READER="zathura"

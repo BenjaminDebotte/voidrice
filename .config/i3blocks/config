@@ -12,9 +12,9 @@ label=🎼
 interval=once
 signal=11
 
-[news]
-interval=once
-signal=6
+#[news]
+#interval=once
+#signal=6
 
 #[iplocate]
 #interval=30
@@ -35,9 +35,9 @@ signal=5
 interval=180
 signal=12
 
-#[memory]
-#interval=30
-#label=🧠
+[memory]
+interval=30
+label=🧠
 
 #[cpu]
 #interval=15
