@@ -22,6 +22,41 @@ for_window [class="^.*"] border pixel 2
 gaps inner $inner_gaps
 gaps outer $outer_gaps
 
+
+
+# Colours
+set $bg_active                  #d6ad09
+set $bg_inactive                #073642
+set $bg_urgent                   #FF2800
+
+set $border_active              #b58900
+set $border_inactive            $bg_inactive
+set $border_urgent              $B27B78
+
+set $text_active                #FDFEFF
+set $text_inactive              #212121
+
+set $bg_active_workspace        #b58900
+set $bg_inactive_workspace      #C48D62
+
+set $bg_bar                     #383E47AA
+set $indicator                  #03C0FF
+
+set $rofi_bg                    #007095
+set $rofi_fg                    #000000
+set $rofi_selected              #FFFFFF
+
+#######################################################
+#                        Gaps                         #
+#######################################################
+
+# window colors         border              background          text                 indicator
+client.focused          $border_active      $bg_active          $text_active         $border_active
+client.unfocused        $border_inactive    $bg_inactive        $text_inactive       $border_inactive
+client.focused_inactive $border_inactive    $bg_inactive        $text_inactive       $border_inactive
+client.urgent           $border_urgent      $bg_urgent          $text_active         $border_urgent
+
+
 # #---Dropdown Windows---# #
 # General dropdown window traits. The order can matter.
 for_window [instance="dropdown_*"] floating enable
@@ -357,3 +392,4 @@ bindsym XF86Documents		exec $term -e lf ~/Documents
 ##bindsym XF86Battery		exec
 ##bindsym XF86Bluetooth		exec
 bindsym XF86WLAN		exec $netrefresh
+exec_always --no-startup-id notify-send -i ~/.local/share/larbs/larbs.png 'Welcome to LARBS:' 'Press Super+F1 for the manual.' -t 10000
